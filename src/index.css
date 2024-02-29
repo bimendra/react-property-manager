@@ -32,7 +32,11 @@
     --color-disabled: var(var(--color-disabled));
     --color-border: theme(colors.slate.500)
 
-    /* Background colors */
+    --color-background: white;
+    --color-neutral-muted: var(--color-background);
+    --color-neutral-muted-hover: theme(colors.slate.200);
+    --color-neutral-muted-active: theme(colors.slate.300);
+    --color-neutral-muted-focus: theme(colors.slate.200);
   }
 }
 

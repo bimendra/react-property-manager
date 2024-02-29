@@ -1,6 +1,6 @@
 import { HtmlHTMLAttributes, ReactNode } from "react";
 
-export type ButtonVariant = "default" | "filled" | "outline" | "link";
+export type ButtonVariant = "default" | "filled" | "outline" | "link" | "ghost";
 
 export interface ButtonProps extends HtmlHTMLAttributes<HTMLButtonElement> {
   type?: ButtonVariant;
@@ -22,6 +22,8 @@ export default function Button({
       "text-invert bg-button-filled border-button-filled hover:bg-button-filled-hover active:bg-button-filled-active hover:border-button-filled-hover active:border-button-filled-active focus:ring-filled-focus",
     outline: "",
     link: "",
+    ghost:
+      "text-button-neutral bg-button-ghost border-button-ghost hover:bg-button-ghost-hover active:bg-button-ghost-active hover:border-button-ghost-hover active:border-button-ghost-active focus:ring-ghost-focus border-transparent",
   };
 
   return (
