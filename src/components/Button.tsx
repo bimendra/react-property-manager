@@ -28,9 +28,18 @@ export default function Button({
       "text-button-neutral bg-button-ghost border-button-ghost hover:bg-button-ghost-hover active:bg-button-ghost-active hover:border-button-ghost-hover active:border-button-ghost-active focus:ring-ghost-focus border-transparent focus:active:ring-transparent",
   };
 
+  let paddingClasses: string;
+  if (type === "link") {
+    paddingClasses = "px-2";
+  } else if (iconOnly) {
+    paddingClasses = "p-[calc(0.5rem-1px)]";
+  } else {
+    paddingClasses = "px-[calc(1.25rem-1px)] py-[calc(0.5rem-1px)]";
+  }
+
   return (
     <button
-      className={`inline-flex items-center gap-2 rounded-md border-2 ${type !== "link" ?? iconOnly ? "px-[calc(0.5rem-1px)] py-[calc(0.5rem-1px)]" : type !== "link" ?? "px-[calc(1.25rem-1px)] py-[calc(0.5rem-1px)]"}  text-sm font-medium outline-none ring ring-transparent ${classNames[type]}`}
+      className={`inline-flex items-center gap-2 rounded-md border-2 ${paddingClasses}  text-sm font-medium outline-none ring ring-transparent ${classNames[type]}`}
     >
       {children}
     </button>

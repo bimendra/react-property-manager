@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function Header() {
   return (
     <div className="flex gap-2">
-      <Button iconOnly type="filled">
+      <Button iconOnly>
         <LuBell />
       </Button>
     </div>
